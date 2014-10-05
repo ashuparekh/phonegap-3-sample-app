@@ -10,8 +10,7 @@ body {
 	left:0;
 	right:0;
 	bottom:0;
-	background-color:#abcdef; /* change if the mask should have another color then white */
-
+	background-color:#ffffff; /* change if the mask should have another color then white */
 	z-index:99; /* makes sure it stays on top */
 }
 
@@ -21,10 +20,8 @@ body {
 	position:absolute;
 	left:50%; /* centers the loading animation horizontally one the screen */
 	top:50%; /* centers the loading animation vertically one the screen */
-	background-image:url(../img/loader.gif); /* path to your loading animation */
-
+	background-image:url(../img/status.gif); /* path to your loading animation */
 	background-repeat:no-repeat;
 	background-position:center;
-	opacity:1;
 	margin:-100px 0 0 -100px; /* is width and height divided by two */
 }
