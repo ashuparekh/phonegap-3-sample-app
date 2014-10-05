@@ -14,15 +14,39 @@
 
 
 <script>
- 
-var a=navigator.onLine;
- if(a){
-   
- }else{
-  window.open("3.html","_self","","true");
- }
- </script>
 
+   document.addEventListener("deviceready", onDeviceReady, false);
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        checkConnection();
+    }
+
+        function checkConnection() {
+            var networkState = navigator.connection.type;
+
+            var states = {};
+            states[Connection.UNKNOWN]  = true;
+            states[Connection.ETHERNET] = true;
+            states[Connection.WIFI]     = true;
+            states[Connection.CELL_2G]  = true;
+            states[Connection.CELL_3G]  = true;
+            states[Connection.CELL_4G]  = true;
+            states[Connection.CELL]     = true;
+            states[Connection.NONE]     = false;
+
+         //   alert('Connection type: ' + states[networkState]);
+            if(states[networkState])
+            {
+
+            }
+            else
+            {
+              window.open("3.html","_self","","true");
+            }
+        }
+
+    </script>
 
 
 
